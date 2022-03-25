@@ -1,28 +1,29 @@
-# note   Mis pasos a seguir
-:~$ git config -l
-:~$ git config --global user.name "dczinil@'star wars planet'"
-:~$ git config --global user.mail "correo"
+# note Mis pasos a seguir
+/n :~$ git config -l
+/n :~$ git config --global user.name "dczinil@'star wars planet'"
+/n :~$ git config --global user.mail "correo"
+.
+    <!-- Linux -->
+:~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
 :~$ ssh-key -t rsa -b 4096 -C "dczinil@gmail.com"
 :~$ eval "$(ssh-agent -s)"
 :~$ install xclip
 :~$ xclip -selection clipboard < ~/.ssh/id_rsa.pub
-
-
-ssh-keygen -t ed25519 -C “your_email@example.com”
-ssh-keygen -t rsa -b 4096 -C "dczinil@gmail.com"
-
-
-:~$ git 
-:~$ git
-:~$ git
-:~$ git
-:~$ git
-:~$ git
-
-
+.
+    <!-- Windows -->
+~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
+~> ssh-keygen -t rsa -b 4096 -C "dczinil@gmail.com"
+~> clip < "url/ed25519.pub"
+.
+    <!-- Como iniciar bajar un repositorio de github -->
+:~$ git init
+:~$ git add "url"
+:~$ git commit -m "Commentarios"
+:~$ git remote add "url"
+:~$  git pull origin master
 
 # Nuevo repositorio en la línea de comando
-
+.
 :~$ echo "# aprendiendo_git" >> README.md
 :~$ git init
 :~$ git add README.md
@@ -32,7 +33,7 @@ ssh-keygen -t rsa -b 4096 -C "dczinil@gmail.com"
 :~$ git push -u origin "main o master"
 
 # Inserte un repositorio existente desde la línea de comando
-
+.
 :~$ git remote add origin https://github.com/dczinil/"repositorio.git"
 :~$ git branch -M "main o master"
 :~$ git push -u origin "main o master"
