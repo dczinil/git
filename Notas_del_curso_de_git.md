@@ -129,14 +129,20 @@
     # 
     # Hay que volver hacer commit
     -->
-:~$ git merge "nombre de la rama"
+:~$ git merge <nombre de la rama>
     <!-- Para abortar un merge o revertir hay que invocar. -->
 :~$ git merge --abort
 
 # Para generar una nueva rama
 
-:~$ git branch "nombre de la rama"
+:~$ git branch <nombre de la rama>
     <!-- Para borrar una rama. -->
+:~$ git branch -d <Nombre de la rama>
+    <!-- Forzar el barrar rama. Tal ves se necesite forzar en caso de que la rama tenga trabaos sin fusionar -->
+:~$ git branch -D <Nombre de la rama>
+    <!-- Eliminar ramas de repositorios remotos -->
+:~$ git push origin :<Nombre de la rama>
+
 
 
 # Para poder clonar un repositorio de un servidor remoto se utiliza el diferenciador 'clone' lo más comun es utilizar de servicios como 'github' y 'gitlab'.
@@ -167,3 +173,5 @@
 :~$ git -d <Nombre del tag>
     <!-- Eliminar tag de forma definitiva en la nube de git -->
 :~$ git push origin :refs/tags/<Nombre del tag>
+
+# 
