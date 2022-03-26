@@ -69,9 +69,22 @@
     <!-- Agrega al commit todos los comentarios sin pasar por el "gir add ...", solo aplica para los archivos que no son recien creados -->
 :~$ gir commit -am "Comentarios"
 
-# Para ver el historico de los eventos de git se realiza. Si se agrega el parametro "--stat", revisas que cambios se han hecho a cada archivo. 
+# Para ver el historico de los eventos de git se realiza. 
 
+:~$ git log
+.
+    <!-- Revisas que cambios se han hecho a cada archivo. -->
 :~$ git log --stat
+.
+    <!-- Para ver un los commit un poco más graficos. -->
+:~$ git log --all --graph 
+.
+    <!-- Para ver los commit enun entorno aun más grafico y compacto -->
+:~$ git log --all --graph --decorate --oneline
+.
+    <!-- NOTE Linux  -->
+:~$ alias arbolitogit="git log --all --graph --decorate --oneline"
+
 
 # Para ver el historico de un archivo es con el comando
 
