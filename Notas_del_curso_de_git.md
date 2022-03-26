@@ -2,19 +2,16 @@
 /n :~$ git config -l
 /n :~$ git config --global user.name "dczinil@'star wars planet'"
 /n :~$ git config --global user.mail "correo"
-.
     <!-- Linux -->
 :~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
 :~$ ssh-key -t rsa -b 4096 -C "dczinil@gmail.com"
 :~$ eval "$(ssh-agent -s)"
 :~$ install xclip
 :~$ xclip -selection clipboard < ~/.ssh/id_rsa.pub
-.
     <!-- Windows -->
 ~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
 ~> ssh-keygen -t rsa -b 4096 -C "dczinil@gmail.com"
 ~> clip < "url/ed25519.pub"
-.
     <!-- Como iniciar bajar un repositorio de github -->
 :~$ git init
 :~$ git add "url"
@@ -23,7 +20,7 @@
 :~$  git pull origin master
 
 # Nuevo repositorio en la línea de comando
-.
+
 :~$ echo "# aprendiendo_git" >> README.md
 :~$ git init
 :~$ git add README.md
@@ -33,7 +30,7 @@
 :~$ git push -u origin "main o master"
 
 # Inserte un repositorio existente desde la línea de comando
-.
+
 :~$ git remote add origin https://github.com/dczinil/"repositorio.git"
 :~$ git branch -M "main o master"
 :~$ git push -u origin "main o master"
@@ -46,7 +43,7 @@
 
 # Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
 .
-    <!-- Para revisar lo que tenemos configurado en git  -->
+    <!-- Para revisar lo que tenemos configurado en git -->
 :~$ git config -l
     <!-- Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local" -->
 :~$ git config --global users.name <<"Nombre del usuario"@>>
@@ -147,6 +144,7 @@
 :~$ git clone url
 
 # Guardar el repositorio en la nube (GitHub, GitLab, etc.).
+
 :~$ git remote add origin "url"
     <!-- Para verificar que la url se haya guardado correctamente. -->
 :~$ git remote
@@ -155,3 +153,18 @@
 # Para bajar la información de un repositorio remoto se utiliza el comando "pull", para evitar mandar los dos comandos "fetch y merge"
 
 :~$ git pull origin master --allow-unrelated-histories
+
+# Generar un tag, este se utiliza para revisar las versiones de un proyecto. Se necesita un hash al que se le va aplicar este. #NOTE Los tag no son cambios. 
+
+:~$ git tag -a <Nombre del tag, lo comun 'v0.1'> -m "Comentarios sobre el tag" <Hash>
+    <!-- Para mostrar los tag que se tienen -->
+:~$ git tag
+    <!-- Para saber a que commit o a que tag esta conectado cada tag -->
+:~$ git show-ref --tags
+    <!-- Eviar los tag a la nube de repositorios se utliza -->
+:~$ git push origin --tags
+    <!-- Eliminar tag #NOTE no se eliminan en la nube de git y esto es porque se pueden utilizar como release -->
+:~$ git -d <Nombre del tag>
+    <!-- Eliminar tag de forma definitiva en la nube de git -->
+:~$ git push origin :refs/tags/<Nombre del tag>
+
