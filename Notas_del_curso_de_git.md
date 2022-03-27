@@ -108,7 +108,11 @@
 
 # Para mandar los datos al repositorio remoto se utiliza el complemento 'push'
 
-:~$ git push -u origin "main o master"
+:~$ git push -u origin <main o master>
+    <!-- Eliminar ramas de repositorios remotos -->
+:~$ git push origin :<Nombre de la rama>
+    <!-- Enviar ramas a el repositorio remoto -->
+:~$ git push origin <Nombre de la rama>
 
 # Para traer los datos del repositorio en la nube alrepositorio local si carlos a mis archivos "Tenerlos en memoria cache".
 
@@ -140,10 +144,8 @@
 :~$ git branch -d <Nombre de la rama>
     <!-- Forzar el barrar rama. Tal ves se necesite forzar en caso de que la rama tenga trabaos sin fusionar -->
 :~$ git branch -D <Nombre de la rama>
-    <!-- Eliminar ramas de repositorios remotos -->
-:~$ git push origin :<Nombre de la rama>
-
-
+    <!-- Nos muestra el historial de todas las ramas a detalle -->
+:~$ git show-branch --all
 
 # Para poder clonar un repositorio de un servidor remoto se utiliza el diferenciador 'clone' lo más comun es utilizar de servicios como 'github' y 'gitlab'.
 
@@ -174,4 +176,24 @@
     <!-- Eliminar tag de forma definitiva en la nube de git -->
 :~$ git push origin :refs/tags/<Nombre del tag>
 
-# 
+# Muestra de forma grafica en una nueva ventana el historial completo de git
+:~$ gitk
+
+
+#NOTE Entorno de trabajo
+.
+        <!-- En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un <code review>, si pasa todas las pruebas se realiza un <pull request> al servidor de pruebas llamado <Staging develop>. Despues de verificar que no hay errores se realizar otro <pull request> (Esto solo es una caracteristica de GitHub), alos servidores d eproducción. -->
+.
+        <!-- El equivalente a <Pull request> en Bitbuket {Pull Request}, GitLab {Merge Request} -->
+.
+        ------------------------------------^<Rama master>
+                                            |
+                                     <pull reques>🚀
+                                            |
+        =><Ramas Featare>|                  |
+                         |                  |
+                   <pull reques>            |
+                         |                  |
+        -----------------v<Staging develop>-|
+.
+        <!-- DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles -->
