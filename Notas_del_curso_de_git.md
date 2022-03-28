@@ -205,3 +205,8 @@
     <!-- Al finalizar hay que agregar lo al repositorio de forma normal a staging y posterior commit-->
 :~$git add .gitignore
 :~$git commit -m "Comentarios"
+
+# Markdown
+.
+    <!-- La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo. -->
+https://pandao.github.io/editor.md/en.html
