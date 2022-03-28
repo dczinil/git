@@ -197,3 +197,11 @@
         -----------------v<Staging develop>-|
 .
         <!-- DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles -->
+
+# .gitignore
+.
+    <!-- Se genera un archivo es impresindible que se llame <.gitignore> dentro del el va una lista de los archivos que se van a ignorar. -->
+.   
+    <!-- Al finalizar hay que agregar lo al repositorio de forma normal a staging y posterior commit-->
+:~$git add .gitignore
+:~$git commit -m "Comentarios"
