@@ -207,6 +207,16 @@
 :~$git commit -m "Comentarios"
 
 # Markdown
-.
+</br>
     <!-- La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo. -->
 https://pandao.github.io/editor.md/en.html
+
+# Rebase <Es una mala practica>, sobre escribe los repositorios por lo que si se llega a utilizar es importante que solo se use en el entorn local, la rama que se va unir no deberia de estar en el repositorio remoto solo en el localhost.
+</br>
+        <p>
+        <!-- Se debe de tener cuidado, dado que sobrescribe la historia del proyecto ocaciona varios conflictos cuando hay que hacer release. -->
+        <!-- No quedan historial de los cambios originales -->
+        <!-- No se sabe el autor real de los commit -->
+        <!-- Si la rama principal avanzó varios commit puede generar varios conflictos que se tienen que corregir de forma manual -->
+        <!-- Rebase rimero a la rama que cambia (o que se va a eliminar), despues a la rama que va a qpermanecer. -->
+        </p>
