@@ -1,4 +1,4 @@
-# note Mis pasos a seguir
+<h1 style:"color:#288BA8"> Mis pasos a seguir</h1>
 :~$ git config -l
 :~$ git config --global user.name "dczinil@'star wars planet'"
 :~$ git config --global user.mail <dczinil@gmail.com>
