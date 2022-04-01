@@ -1,47 +1,47 @@
-<h1 style:"color:#288BA8"> Mis pasos a seguir</h1>
-'''
-* :~$ git config -l
-* :~$ git config --global user.name "dczinil@'star wars planet'"
-* :~$ git config --global user.mail <dczinil@gmail.com>
-'''
-    <h4 style:"color:#288BA8">Linux</h4>
-'''
-* :~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-* :~$ ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
-* :~$ eval "$(ssh-agent -s)"
-* :~$ install xclip
-* :~$ xclip -selection clipboard < /.ssh/id_rsa.pub
-'''
-    <h4 style:"color:#288BA8">Windows</h4>
-'''
-* ~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-* ~> ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
-* ~> clip < <url/ed25519.pub>
-'''
-    <h4 style:"color:#288BA8">Como iniciar bajar un repositorio de github</h4>
-'''
-* :~$ git init
-* :~$ git add <url>
-* :~$ git commit -m "Comentarios"
-* :~$ git remote add <url>
-* :~$ git pull origin master
-'''
-    <h4 style:"color:#288BA8"> Nuevo repositorio en la línea de comando</h4>
-'''
-* :~$ echo "# aprendiendo_git" >> README.md
-* :~$ git init
-* :~$ git add README.md
-* :~$ git commit -m "first commit"
-* :~$ git branch -M <main o master>
-* :~$ git remote add origin https://github.com/dczinil/<repositorio.git>
-* :~$ git push -u origin <main o master>
-'''
-    <h4 style:"color:#288BA8">Inserte un repositorio existente desde la línea de comando</h4>
-'''
-* :~$ git remote add origin https://github.com/dczinil/<repositorio.git>
-* :~$ git branch -M <main o master>
-* :~$ git push -u origin <main o master>
-'''
+# Mis pasos a seguir
+
+- :~$ git config -l
+- :~$ git config --global user.name "dczinil@'star wars planet'"
+- :~$ git config --global user.mail <dczinil@gmail.com>
+
+#### Linux
+
+- :~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
+- :~$ ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
+- :~$ eval "$(ssh-agent -s)"
+- :~$ install xclip
+- :~$ xclip -selection clipboard < /.ssh/id_rsa.pub
+
+    ### Windows
+
+- ~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
+- ~> ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
+- ~> clip < <url/ed25519.pub>
+
+    ### Como iniciar bajar un repositorio de github
+
+- :~$ git init
+- :~$ git add <url>
+- :~$ git commit -m "Comentarios"
+- :~$ git remote add <url>
+- :~$ git pull origin master
+
+    ### Nuevo repositorio en la línea de comando
+
+- :~$ echo "# aprendiendo_git" >> README.md
+- :~$ git init
+- :~$ git add README.md
+- :~$ git commit -m "first commit"
+- :~$ git branch -M <main o master>
+- :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
+- :~$ git push -u origin <main o master>
+
+    ### Inserte un repositorio existente desde la línea de comando
+
+- :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
+- :~$ git branch -M <main o master>
+- :~$ git push -u origin <main o master>
+
 .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
 # Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
