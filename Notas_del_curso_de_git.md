@@ -32,7 +32,11 @@
     git push -u origin <main o master>
 ### Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
     git init
-### Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
+### Para tener una referencia de quién realiza los cambios agregamos.
+Con este diferenciador se configuran los cambios de forma globla para todos los repositorios que se utilicen.
+    git config --global 
+Con este diferenciador se configuran los cambios unicamente en ese repositorio.
+    git config --local
 Para revisar lo que tenemos configurado en git.
     git config -l
 Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local".
@@ -45,9 +49,9 @@ Para agregar el correo a la configuración, teneren cuanta "--global y --local".
     git rm <Url Archivo>
 Borrar de la cache -->
     git rm <Url Archivo> --cache
-### Con este comando se genera el historial de versiones, siempre hay que agregar algún comentario para saber qué fue lo que se modificó. Si se le agrega el nombre del archivo al fina solo se modificara este. Si se agrega el parametro "-a" se manda todos los archivos en la carpeta posicionado.
+### Con este comando se genera el historial de versiones, siempre hay que agregar algún comentario para saber qué fue lo que se modificó. Si se le agrega el nombre del archivo al fina solo se modificara este.
     git commit -m "Comentarios"
-Agrega al commit todos los comentarios sin pasar por el "gir add ...", solo aplica para los archivos que no son recien creados.
+Agrega al commit todos los comentarios sin pasar por el "git add ...", solo aplica para los archivos que no son recien creados.
 git commit -am "Comentarios"
 ### Para ver el historico de los eventos de git se realiza. 
     git log
