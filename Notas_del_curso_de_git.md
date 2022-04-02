@@ -241,12 +241,13 @@ Eliminar tag de forma definitiva en la nube de git.
 
 En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un 'code review', si pasa todas las pruebas se realiza un 'pull request' al servidor de pruebas llamado 'Staging develop'. Despues de verificar que no hay errores se realizar otro 'pull request' (Esto solo es una caracteristica de los repositorios remotos cloud), a los servidores de producción.
 
-'''mermaid
+```mermaid
+
 graph LR
 El equivalente a Pull request</br>
 A(Bitbuket) --> B[Pull Request]</br>
 C(GitLab) --> D[Merge Request]</br>
-'''
+```
 
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
 
