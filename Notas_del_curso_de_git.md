@@ -264,6 +264,10 @@ options
     "nodeRadius": 10
 }
 end
+init
+branch fooder
+commit
+commit
 commit
 branch newbranch
 checkout newbranch
