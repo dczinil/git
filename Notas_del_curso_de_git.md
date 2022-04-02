@@ -243,10 +243,7 @@ En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que
 
 ```mermaid
 graph LR
-
-El equivalente a Pull request</br>
-A(Bitbuket) --> B[Pull Request]</br>
-C(GitLab) --> D[Merge Request]</br>
+A(Bitbuket) --> B[Pull Request]
 ```
 
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
