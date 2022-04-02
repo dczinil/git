@@ -259,6 +259,9 @@ A[Flujo de trabajo]-->D([R_login])--merge-->H
 A[Flujo de trabajo]-->E([R_sql])--merge-->H
 A[Flujo de trabajo]-->G([R_interface])--merge-->H
 H([deployment])-->L((Pull Request</br>Merge Request))-->I([Staging  develo])-->O((Pull Request</br>Merge Request))-->K([Rama master])
+
+P([GitHub</br>GitLab</br>Bitbuket</br>])-->L
+
 ```
 
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
