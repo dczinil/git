@@ -156,17 +156,18 @@ Enviar ramas a el repositorio remoto.
 
 ### Une los archivos con los de una rama o nube (posterior a un "fetch"). El merge al unir las ramas se ejecuta desde la rama a la que se le quiere traer las cosas de las demás, lo comun es traer las cosas de las demás ramas a la "Master, Main
 
+Para unir ramas
+
     git merge
 
-Para unir las ramas
+Cuando existe un conflicto. aparecen estos comentarios en el codigo:
+
 ![image text](https://codigonaranja.com/wp-content/uploads/2017/05/merge-conflict-git.png.webp)
-- Cuando existe un conflicto. aparecen estos comentarios en el codigo:
-- <<<<<<<HEAD
-- "Codigo con el que tiene confligto."
-- =======
-- >>>>>>>"nombre de la rama"
-- VSCODE indica conque versión del conflicto te quieres quedar.
-- En otros editores podría ser manual el borrar la parte que no quieres.
+[https://codigonaranja.com/]
+
+
+VSCODE indica conque versión del conflicto te quieres quedar. En otros editores podría ser manual el realizar esta selección, por lo que lo podrías hacer manual.
+
 - Guardar archivo
 - Hay que volver hacer commit
 
