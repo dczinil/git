@@ -246,6 +246,14 @@ graph LR
 A(Bitbuket) --> B[Pull Request]
 ```
 
+```mermaid
+
+graph LR
+A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
+
+```
+
+
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
 
 ### .gitignore
