@@ -111,33 +111,55 @@ Para ver los commit enun entorno aun más grafico y compacto.
 ### Para ver el historico de un archivo es con el comando
 
     git show <Nombre del archivo>
+
 ```mermaid
 El diff muestra las cambios que se han hecho en forma de historial a, b, c...
 "@@...@@" nos indica cuantos bytes han cambiado entre versiones.
 Nos muestra las líneas que han cambiado.
-``
+```
 
 ### Para ver las diferencias entre las versiones del archivo se usa; diff, utilizando los codigo de commit "c8b00e3ed48..." "1c2bb004d70...", regresara la diferencia entre el primer commit y el utimo agregado
+
     git diff <CommitHash>
+
 ### Para realizar un reset y regresar a los archivos se usa el comando "git reset" utilizado el codigo commit al que se quiere regresar. Hay dos tipos de reset "Hard" y "Soft"; Hard regresa a la version mencionada y todo aquel que este en transito es eliminado. Con soft se regresa a la versión requerida pero permanece los archivos en transito.
+
     git reset <CommitHash> --soft
+
 ### Para regresar aun archivo a un tiempo anterior lo realizamos con "'checkout' 'el codigo del commit' 'nombre del archivo'", si se quiere volver permanente hay que realizar un commit antes de regresar a la nueva versión.
+
     git checkout
+
 Para regresar a la versión actual nuevamente es con <checkout master 'nombre del archivo'"
+
     git checkout <CommitHash>
+
 Para cambiar entre ramas
+
     git checkuot <nombre de la rama>
+
 ### Para mandar los datos al repositorio remoto se utiliza el complemento 'push'
+
     git push -u origin <main o master>
+
 Eliminar ramas de repositorios remotos.
+
     git push origin :<Nombre de la rama>
+
 Enviar ramas a el repositorio remoto.
+
     git push origin <Nombre de la rama>
+
 ### Para traer los datos del repositorio en la nube alrepositorio local si carlos a mis archivos "Tenerlos en memoria cache".
+
     git fetch
+
 ### Une los archivos con los de una rama o nube (posterior a un "fetch"). El merge al unir las ramas se ejecuta desde la rama a la que se le quiere traer las cosas de las demás, lo comun es traer las cosas de las demás ramas a la "Master, Main
+
     git merge
+
 Para unir las ramas
+
 - Cuando existe un conflicto. aparecen estos comentarios en el codigo:
 - <<<<<<<HEAD
 - "Codigo con el que tiene confligto."
@@ -147,9 +169,12 @@ Para unir las ramas
 - En otros editores podría ser manual el borrar la parte que no quieres.
 - Guardar archivo
 - Hay que volver hacer commit
+
     git merge <nombre de la rama>
+
 Para abortar un merge o revertir hay que invocar.
-git merge --abort
+    git merge --abort
+
 ### Para generar una nueva rama
     git branch <nombre de la rama>
 Para borrar una rama.</p>
