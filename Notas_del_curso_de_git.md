@@ -1,24 +1,24 @@
-#Mis pasos a seguir
+# Mis pasos a seguir
     git config -l
     git config --global user.name "dczinil@'star wars planet'"
     git config --global user.mail <dczinil@gmail.com>
-####Linux
+#### Linux
     ssh-keygen -t ed25519 -C “dczinil@gmail.com”
     ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
     eval "$(ssh-agent -s)"
     install xclip
     xclip -selection clipboard < /.ssh/id_rsa.pub
-###Windows
+### Windows
     ssh-keygen -t ed25519 -C “dczinil@gmail.com”
     ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
     clip < <url/ed25519.pub>
-###Como iniciar bajar un repositorio de github
+### Como iniciar bajar un repositorio de github
     git init
     git add <url>
     git commit -m "Comentarios"
     git remote add <url>
     git pull origin master
-###Nuevo repositorio en la línea de comando
+### Nuevo repositorio en la línea de comando
     echo "# aprendiendo_git" >> README.md
     git init
     git add README.md
@@ -26,30 +26,30 @@
     git branch -M <main o master>
     git remote add origin [https://github.com/dczinil/]<repositorio.git>
     git push -u origin <main o master>
-###Inserte un repositorio existente desde la línea de comando
+### Inserte un repositorio existente desde la línea de comando
     git remote add origin [https://github.com/dczinil/]<repositorio.git>
     git branch -M <main o master>
     git push -u origin <main o master>
-###Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
+### Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
     git init
-###Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
-###Para revisar lo que tenemos configurado en git.
+### Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
+Para revisar lo que tenemos configurado en git.
     git config -l
 Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local".
     git config --global users.name "<Nombre del usuario>"
 Para agregar el correo a la configuración, teneren cuanta "--global y --local".
     git config --global user.mail <elcorreo@mail.com>
-###Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
+### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
     git add <Url Archivos>
-###Para eliminar del seguimiento.
+### Para eliminar del seguimiento.
     git rm <Url Archivo>
 Borrar de la cache -->
     git rm <Url Archivo> --cache
-###Con este comando se genera el historial de versiones, siempre hay que agregar algún comentario para saber qué fue lo que se modificó. Si se le agrega el nombre del archivo al fina solo se modificara este. Si se agrega el parametro "-a" se manda todos los archivos en la carpeta posicionado.
+### Con este comando se genera el historial de versiones, siempre hay que agregar algún comentario para saber qué fue lo que se modificó. Si se le agrega el nombre del archivo al fina solo se modificara este. Si se agrega el parametro "-a" se manda todos los archivos en la carpeta posicionado.
     git commit -m "Comentarios"
 Agrega al commit todos los comentarios sin pasar por el "gir add ...", solo aplica para los archivos que no son recien creados.
 git commit -am "Comentarios"
-###Para ver el historico de los eventos de git se realiza. 
+### Para ver el historico de los eventos de git se realiza. 
     git log
 Revisas que cambios se han hecho a cada archivo.
     git log --stat
@@ -57,18 +57,18 @@ Para ver un los commit un poco más graficos.
     git log --all --graph 
 Para ver los commit enun entorno aun más grafico y compacto.
     git log --all --graph --decorate --oneline
-###Linux
+### Linux
     alias arbolitogit="git log --all --graph --decorate --oneline"
-###Para ver el historico de un archivo es con el comando
+### Para ver el historico de un archivo es con el comando
     git show <Nombre del archivo>
 El diff muestra las cambios que se han hecho en forma de historial a, b, c...
 "@@...@@" nos indica cuantos bytes han cambiado entre versiones.
 Nos muestra las líneas que han cambiado.
 ###Para ver las diferencias entre las versiones del archivo se usa; diff, utilizando los codigo de commit "c8b00e3ed48..." "1c2bb004d70...", regresara la diferencia entre el primer commit y el utimo agregado
     git diff <CommitHash>
-###Para realizar un reset y regresar a los archivos se usa el comando "git reset" utilizado el codigo commit al que se quiere regresar. Hay dos tipos de reset "Hard" y "Soft"; Hard regresa a la version mencionada y todo aquel que este en transito es eliminado. Con soft se regresa a la versión requerida pero permanece los archivos en transito.
+### Para realizar un reset y regresar a los archivos se usa el comando "git reset" utilizado el codigo commit al que se quiere regresar. Hay dos tipos de reset "Hard" y "Soft"; Hard regresa a la version mencionada y todo aquel que este en transito es eliminado. Con soft se regresa a la versión requerida pero permanece los archivos en transito.
     git reset <1c2bb004d70103cae33e7d05f4f98357684e2cc4> --soft
-###Para regresar aun archivo a un tiempo anterior lo realizamos con "'checkout' 'el codigo del commit' 'nombre del archivo'", si se quiere volver permanente hay que realizar un commit antes de regresar a la nueva versión.
+### Para regresar aun archivo a un tiempo anterior lo realizamos con "'checkout' 'el codigo del commit' 'nombre del archivo'", si se quiere volver permanente hay que realizar un commit antes de regresar a la nueva versión.
     git checkout
 Para regresar a la versión actual nuevamente es con <checkout master 'nombre del archivo'"
     git checkout <1c2bb004d70103cae33e7d05f4f98357684e2cc4> Notas_del_curso_de_git.txt
