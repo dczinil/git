@@ -264,14 +264,12 @@ options
     "nodeRadius": 10
 }
 end
-init
+commit
 branch fooder
 commit
-commit
-commit
 branch newbranch
-checkout newbranch
 commit
+branch header
 commit
 checkout master
 commit
