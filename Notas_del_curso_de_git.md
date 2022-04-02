@@ -256,6 +256,24 @@ graph LR
 A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
 
 ```
+```mermaid
+gitgraph
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
 
 
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
