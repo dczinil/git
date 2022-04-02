@@ -1,69 +1,48 @@
 # Mis pasos a seguir
-
-- :~$ git config -l
-- :~$ git config --global user.name "dczinil@'star wars planet'"
-- :~$ git config --global user.mail <dczinil@gmail.com>
-
-    #### Linux
-
-- :~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-- :~$ ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
-- :~$ eval "$(ssh-agent -s)"
-- :~$ install xclip
-- :~$ xclip -selection clipboard < /.ssh/id_rsa.pub
-
-    ### Windows
-
-- ~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-- ~> ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
-- ~> clip < <url/ed25519.pub>
-
-    ### Como iniciar bajar un repositorio de github
-
+    - :~$ git config -l
+    - :~$ git config --global user.name "dczinil@'star wars planet'"
+    - :~$ git config --global user.mail <dczinil@gmail.com>
+#### Linux
+    - :~$ ssh-keygen -t ed25519 -C “dczinil@gmail.com”
+    - :~$ ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
+    - :~$ eval "$(ssh-agent -s)"
+    - :~$ install xclip
+    - :~$ xclip -selection clipboard < /.ssh/id_rsa.pub
+### Windows
+    - ~> ssh-keygen -t ed25519 -C “dczinil@gmail.com”
+    - ~> ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
+    - ~> clip < <url/ed25519.pub>
+### Como iniciar bajar un repositorio de github
+    - :~$ git init
+    - :~$ git add <url>
+    - :~$ git commit -m "Comentarios"
+    - :~$ git remote add <url>
+    - :~$ git pull origin master
+### Nuevo repositorio en la línea de comando
+    - :~$ echo "# aprendiendo_git" >> README.md
+    - :~$ git init
+    - :~$ git add README.md
+    - :~$ git commit -m "first commit"
+    - :~$ git branch -M <main o master>
+    - :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
+    - :~$ git push -u origin <main o master>
+### Inserte un repositorio existente desde la línea de comando
+    - :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
+    - :~$ git branch -M <main o master>
+    - :~$ git push -u origin <main o master>
+## Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
 - :~$ git init
-- :~$ git add <url>
-- :~$ git commit -m "Comentarios"
-- :~$ git remote add <url>
-- :~$ git pull origin master
-
-    ### Nuevo repositorio en la línea de comando
-
-- :~$ echo "# aprendiendo_git" >> README.md
-- :~$ git init
-- :~$ git add README.md
-- :~$ git commit -m "first commit"
-- :~$ git branch -M <main o master>
-- :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
-- :~$ git push -u origin <main o master>
-
-    ### Inserte un repositorio existente desde la línea de comando
-
-- :~$ git remote add origin [https://github.com/dczinil/]<repositorio.git>
-- :~$ git branch -M <main o master>
-- :~$ git push -u origin <main o master>
-
-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-
-    ### Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
-
-:~$ git init
-
-    ### Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
-.
-    <!-- Para revisar lo que tenemos configurado en git -->
-:~$ git config -l
-    <!-- Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local" -->
-:~$ git config --global users.name "<Nombre del usuario>"
-    <!-- Para agregar el correo a la configuración, teneren cuanta "--global y --local" -->
-:~$ git config --global user.mail <elcorreo@mail.com>
-
-    ### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
-
-:~$ git add <Url Archivos>
-
-    ### Para eliminar del seguimiento.
-
-:~$ git rm <Url Archivo>
+### Para tener una referencia de quién realiza los cambios agregamos. El diferenciador "--global", es para todos los repositorios en los que se trabaje, en cambio "--local", es para este entorno específico.
+Para revisar lo que tenemos configurado en git.
+    - :~$ git config -l
+Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local".
+    - :~$ git config --global users.name "<Nombre del usuario>"
+Para agregar el correo a la configuración, teneren cuanta "--global y --local" -->
+    - :~$ git config --global user.mail <elcorreo@mail.com>
+### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
+    - :~$ git add <Url Archivos>
+### Para eliminar del seguimiento.
+    - :~$ git rm <Url Archivo>
     <!-- Borrar de la cache -->
 :~$ git rm <Url Archivo> --cache
 
@@ -182,8 +161,7 @@
 - :~$git add .gitignore
 - :~$git commit -m "Comentarios"
     ### Markdown
-        La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo.
-***[https://pandao.github.io/editor.md/en.html]
+        La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo.[https://pandao.github.io/editor.md/en.html]
     ### Rebase <Es una mala practica>, sobre escribe los repositorios por lo que si se llega a utilizar es importante que solo se use en el entorn local, la rama que se va unir no deberia de estar en el repositorio remoto solo en el localhost.
         <li>
         Se debe de tener cuidado, dado que sobrescribe la historia del proyecto ocaciona varios conflictos cuando hay que hacer release.
