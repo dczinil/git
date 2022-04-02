@@ -33,16 +33,22 @@
 ### Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
     git init
 ### Para tener una referencia de quién realiza los cambios agregamos.
+
 Con este diferenciador se configuran los cambios de forma globla para todos los repositorios que se utilicen.
-    git config --global 
+    git config --global
+
 Con este diferenciador se configuran los cambios unicamente en ese repositorio.
     git config --local
+
 Para revisar lo que tenemos configurado en git.
     git config -l
+
 Para agregar el nombre a la configuracióon.
     git config --global users.name "<Nombre del usuario>"
+
 Para agregar el correo a la configuración.
     git config --global user.email <elcorreo@mail.com>
+
 ### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
     git add <Url Archivos>
 ### Para eliminar del seguimiento.
