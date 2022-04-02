@@ -171,9 +171,8 @@ VSCODE indica conque versión del conflicto te quieres quedar. En otros editores
 - Guardar archivo
 - Hay que volver hacer commit
 
-    git merge <nombre de la rama>
-
 Para abortar un merge o revertir hay que invocar.
+
     git merge --abort
 
 ### Para generar una nueva rama
