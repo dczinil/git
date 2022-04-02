@@ -193,7 +193,7 @@
 .
         <!-- El equivalente a <Pull request> en Bitbuket {Pull Request}, GitLab {Merge Request} -->
 .
-        ------------------------------------^<Rama master>
+        ....................................^<Rama master>
                                             |
                                      <pull reques>🚀
                                             |
@@ -201,7 +201,12 @@
                          |                  |
                    <pull reques>            |
                          |                  |
-        -----------------v<Staging develop>-|
+        .................v<Staging develop>-|
+
+```mermaid
+graph LR
+A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pullrequest-->F([Rama master])
+```
 .
         <!-- DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles -->
 
