@@ -195,7 +195,7 @@
 .
         ....................................^<Rama master>
                                             |
-                                     <pull reques>🚀
+                                     <pull reques>
                                             |
         =><Ramas Featare>|                  |
                          |                  |
@@ -205,7 +205,7 @@
 
 ```mermaid
 graph LR
-A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pullrequest-->F([Rama master])
+A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request🚀-->D([Staging  develo])--Pull Request🚀-->F([Rama master])
 ```
 .
         <!-- DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles -->
