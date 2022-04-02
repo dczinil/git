@@ -261,7 +261,7 @@ A[Flujo de trabajo]-->G([R_interface])--merge-->H
 H([deployment])-->L((Pull Request</br>Merge Request))-->I([Staging  develo])-->O((Pull Request</br>Merge Request))-->K([Rama master])
 
 P([GitHub</br>GitLab</br>Bitbuket</br>])-->O
-P([GitHub</br>GitLab</br>Bitbuket</br>])-->L
+P([GitHub</br>GitLab</br>Bitbuket</br>])----->L
 
 
 ```
