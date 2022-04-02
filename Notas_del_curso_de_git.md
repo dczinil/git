@@ -159,6 +159,7 @@ Enviar ramas a el repositorio remoto.
     git merge
 
 Para unir las ramas
+![image text](https://codigonaranja.com/wp-content/uploads/2017/05/merge-conflict-git.png.webp)
 - Cuando existe un conflicto. aparecen estos comentarios en el codigo:
 - <<<<<<<HEAD
 - "Codigo con el que tiene confligto."
