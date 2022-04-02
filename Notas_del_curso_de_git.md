@@ -1,24 +1,33 @@
 # Mis pasos a seguir
+
     git config -l
     git config --global user.name "dczinil@'star wars planet'"
     git config --global user.mail <dczinil@gmail.com>
+
 #### Linux
+
     ssh-keygen -t ed25519 -C “dczinil@gmail.com”
     ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
     eval "$(ssh-agent -s)"
     install xclip
     xclip -selection clipboard < /.ssh/id_rsa.pub
+
 ### Windows
+
     ssh-keygen -t ed25519 -C “dczinil@gmail.com”
     ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
     clip < <url/ed25519.pub>
+
 ### Como iniciar bajar un repositorio de github
+
     git init
     git add <url>
     git commit -m "Comentarios"
     git remote add <url>
     git pull origin master
+
 ### Nuevo repositorio en la línea de comando
+
     echo "# aprendiendo_git" >> README.md
     git init
     git add README.md
@@ -26,55 +35,89 @@
     git branch -M <main o master>
     git remote add origin [https://github.com/dczinil/]<repositorio.git>
     git push -u origin <main o master>
+
 ### Inserte un repositorio existente desde la línea de comando
+
     git remote add origin [https://github.com/dczinil/]<repositorio.git>
     git branch -M <main o master>
     git push -u origin <main o master>
+
 ### Se realiza sta comando para iniciar "git" en la carpeta que se encuenta la terminal.
+
     git init
+
 ### Para tener una referencia de quién realiza los cambios agregamos.
 
 Con este diferenciador se configuran los cambios de forma globla para todos los repositorios que se utilicen.
+
     git config --global
 
 Con este diferenciador se configuran los cambios unicamente en ese repositorio.
+
     git config --local
 
 Para revisar lo que tenemos configurado en git.
+
     git config -l
 
 Para agregar el nombre a la configuracióon.
+
     git config --global users.name "<Nombre del usuario>"
 
 Para agregar el correo a la configuración.
+
     git config --global user.email <elcorreo@mail.com>
 
 ### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
+
     git add <Url Archivos>
+
 ### Para eliminar del seguimiento.
+
     git rm <Url Archivo>
+
 Borrar de la cache -->
+
     git rm <Url Archivo> --cache
+
 ### Con este comando se genera el historial de versiones, siempre hay que agregar algún comentario para saber qué fue lo que se modificó. Si se le agrega el nombre del archivo al fina solo se modificara este.
+
     git commit -m "Comentarios"
+
 Agrega al commit todos los comentarios sin pasar por el "git add ...", solo aplica para los archivos que no son recien creados.
+
 git commit -am "Comentarios"
+
 ### Para ver el historico de los eventos de git se realiza. 
+
     git log
+
 Revisas que cambios se han hecho a cada archivo.
+
     git log --stat
+
 Para ver un los commit un poco más graficos.
+
     git log --all --graph 
+
 Para ver los commit enun entorno aun más grafico y compacto.
+
     git log --all --graph --decorate --oneline
+
 ### Linux
+
     alias arbolitogit="git log --all --graph --decorate --oneline"
+
 ### Para ver el historico de un archivo es con el comando
+
     git show <Nombre del archivo>
+```mermaid
 El diff muestra las cambios que se han hecho en forma de historial a, b, c...
 "@@...@@" nos indica cuantos bytes han cambiado entre versiones.
 Nos muestra las líneas que han cambiado.
-###Para ver las diferencias entre las versiones del archivo se usa; diff, utilizando los codigo de commit "c8b00e3ed48..." "1c2bb004d70...", regresara la diferencia entre el primer commit y el utimo agregado
+``
+
+### Para ver las diferencias entre las versiones del archivo se usa; diff, utilizando los codigo de commit "c8b00e3ed48..." "1c2bb004d70...", regresara la diferencia entre el primer commit y el utimo agregado
     git diff <CommitHash>
 ### Para realizar un reset y regresar a los archivos se usa el comando "git reset" utilizado el codigo commit al que se quiere regresar. Hay dos tipos de reset "Hard" y "Soft"; Hard regresa a la version mencionada y todo aquel que este en transito es eliminado. Con soft se regresa a la versión requerida pero permanece los archivos en transito.
     git reset <CommitHash> --soft
