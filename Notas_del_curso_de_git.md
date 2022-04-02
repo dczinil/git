@@ -39,10 +39,10 @@ Con este diferenciador se configuran los cambios unicamente en ese repositorio.
     git config --local
 Para revisar lo que tenemos configurado en git.
     git config -l
-Para agregar el nombre a la configuracióon, teneren cuanta "--global y --local".
+Para agregar el nombre a la configuracióon.
     git config --global users.name "<Nombre del usuario>"
-Para agregar el correo a la configuración, teneren cuanta "--global y --local".
-    git config --global user.mail <elcorreo@mail.com>
+Para agregar el correo a la configuración.
+    git config --global user.email <elcorreo@mail.com>
 ### Es para agregar los archivos en el seguimiento. Agregando el ".", se le da seguimiento a todos los archivos en esa carpeta.
     git add <Url Archivos>
 ### Para eliminar del seguimiento.
@@ -71,7 +71,7 @@ Nos muestra las líneas que han cambiado.
 ###Para ver las diferencias entre las versiones del archivo se usa; diff, utilizando los codigo de commit "c8b00e3ed48..." "1c2bb004d70...", regresara la diferencia entre el primer commit y el utimo agregado
     git diff <CommitHash>
 ### Para realizar un reset y regresar a los archivos se usa el comando "git reset" utilizado el codigo commit al que se quiere regresar. Hay dos tipos de reset "Hard" y "Soft"; Hard regresa a la version mencionada y todo aquel que este en transito es eliminado. Con soft se regresa a la versión requerida pero permanece los archivos en transito.
-    git reset <1c2bb004d70103cae33e7d05f4f98357684e2cc4> --soft
+    git reset <CommitHash> --soft
 ### Para regresar aun archivo a un tiempo anterior lo realizamos con "'checkout' 'el codigo del commit' 'nombre del archivo'", si se quiere volver permanente hay que realizar un commit antes de regresar a la nueva versión.
     git checkout
 Para regresar a la versión actual nuevamente es con <checkout master 'nombre del archivo'"
