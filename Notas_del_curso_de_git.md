@@ -245,6 +245,10 @@ En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que
 graph LR
 A(Bitbuket) --> B[Pull Request]
 ```
+```mermaid
+graph LR
+A(GitLab) --> B[Merge Request]
+```
 
 ```mermaid
 
