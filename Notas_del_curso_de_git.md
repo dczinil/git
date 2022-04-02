@@ -192,20 +192,10 @@
         <!-- En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un <code review>, si pasa todas las pruebas se realiza un <pull request> al servidor de pruebas llamado <Staging develop>. Despues de verificar que no hay errores se realizar otro <pull request> (Esto solo es una caracteristica de GitHub), alos servidores d eproducción. -->
 .
         <!-- El equivalente a <Pull request> en Bitbuket {Pull Request}, GitLab {Merge Request} -->
-.
-        ....................................^<Rama master>
-                                            |
-                                     <pull reques>
-                                            |
-        =><Ramas Featare>|                  |
-                         |                  |
-                   <pull reques>            |
-                         |                  |
-        .................v<Staging develop>-|
 
 ```mermaid
 graph LR
-A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request🚀-->D([Staging  develo])--Pull Request🚀-->F([Rama master])
+A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
 ```
 .
         <!-- DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles -->
