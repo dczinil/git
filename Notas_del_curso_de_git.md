@@ -112,7 +112,7 @@ Para ver los commit enun entorno aun más grafico y compacto.
 
     git show <Nombre del archivo>
 
-```mermaid
+```
 El diff muestra las cambios que se han hecho en forma de historial a, b, c...
 "@@...@@" nos indica cuantos bytes han cambiado entre versiones.
 Nos muestra las líneas que han cambiado.
@@ -159,7 +159,6 @@ Enviar ramas a el repositorio remoto.
     git merge
 
 Para unir las ramas
-
 - Cuando existe un conflicto. aparecen estos comentarios en el codigo:
 - <<<<<<<HEAD
 - "Codigo con el que tiene confligto."
@@ -176,52 +175,93 @@ Para abortar un merge o revertir hay que invocar.
     git merge --abort
 
 ### Para generar una nueva rama
+
     git branch <nombre de la rama>
+
 Para borrar una rama.</p>
+
     git branch -d <Nombre de la rama>
+
 Forzar el barrar rama. Tal ves se necesite forzar en caso de que la rama tenga trabaos sin fusionar.
+
     git branch -D <Nombre de la rama>
+
 Nos muestra el historial de todas las ramas a detalle
+
     git show-branch --all
+
 ### Para poder clonar un repositorio de un servidor remoto se utiliza el diferenciador 'clone' lo más comun es utilizar de servicios como 'github' y 'gitlab'.
+
     git clone url
+
 ### Guardar el repositorio en la nube (GitHub, GitLab, etc.).
+
     git remote add origin "url"
+
 Para verificar que la url se haya guardado correctamente.
+
     git remote
     git remote -v
+
 ### Para bajar la información de un repositorio remoto se utiliza el comando "pull", para evitar mandar los dos comandos "fetch y merge"
+
     git pull origin master --allow-unrelated-histories
+
 ### Generar un tag, este se utiliza para revisar las versiones de un proyecto. Se necesita un hash al que se le va aplicar este. #NOTE Los tag no son cambios. 
+
     git tag -a <Nombre del tag, lo comun 'v0.1'> -m "Comentarios sobre el tag" <Hash>
+
 Para mostrar los tag que se tienen.
+
     git tag
+
 Para saber a que commit o a que tag esta conectado cada tag.
+
     git show-ref --tags
+
 Eviar los tag a la nube de repositorios se utliza.
+
     git push origin --tags
+
 Eliminar tag #NOTE no se eliminan en la nube de git y esto es porque se pueden utilizar como release.
+
     git -d <Nombre del tag>
+
 Eliminar tag de forma definitiva en la nube de git.
+
     git push origin :refs/tags/<Nombre del tag>
+
 ### Muestra de forma grafica en una nueva ventana el historial completo de git
+
     gitk
+
 ### Entorno de trabajo
-En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un <code review>, si pasa todas las pruebas se realiza un <pull request> al servidor de pruebas llamado <Staging develop>. Despues de verificar que no hay errores se realizar otro <pull request> (Esto solo es una caracteristica de GitHub), alos servidores d eproducción.</p>
+
+En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un <code review>, si pasa todas las pruebas se realiza un <pull request> al servidor de pruebas llamado <Staging develop>. Despues de verificar que no hay errores se realizar otro <pull request> (Esto solo es una caracteristica de GitHub), alos servidores d eproducción.
+
 El equivalente a <Pull request> en Bitbuket {Pull Request}, GitLab {Merge Request} -->
 ```mermaid
 graph LR
 A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
 ```
+
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
+
 ### .gitignore
+
 Se genera un archivo es impresindible que se llame <.gitignore> dentro del el va una lista de los archivos que se van a ignorar.
+
 Al finalizar hay que agregar lo al repositorio de forma normal a staging y posterior commit
+
     git add .gitignore
     git commit -m "Comentarios"
+
 ### Markdown
+
 La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo.[https://pandao.github.io/editor.md/en.html]
+
 ### Rebase <Es una mala practica>, sobre escribe los repositorios por lo que si se llega a utilizar es importante que solo se use en el entorn local, la rama que se va unir no deberia de estar en el repositorio remoto solo en el localhost.
+
 - Se debe de tener cuidado, dado que sobrescribe la historia del proyecto ocaciona varios conflictos cuando hay que hacer release.
 - No quedan historial de los cambios originales.
 - No se sabe el autor real de los commit.
