@@ -177,12 +177,12 @@
     ```
     <p>DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles</p>
     ### .gitignore
-        <p>Se genera un archivo es impresindible que se llame <.gitignore> dentro del el va una lista de los archivos que se van a ignorar./<p>
+        <p>Se genera un archivo es impresindible que se llame <.gitignore> dentro del el va una lista de los archivos que se van a ignorar./<>
         <p>Al finalizar hay que agregar lo al repositorio de forma normal a staging y posterior commit</p>
 - :~$git add .gitignore
 - :~$git commit -m "Comentarios"
     ### Markdown
-        <p>La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo.</p>
+        La importanciía de tener un readme en la raíz de tu repositorio es para que puedan leer de que se trata y quienes pueden y como pueden contribuir. Hay paginas que te ayudan a editar lo.
 ***[https://pandao.github.io/editor.md/en.html]
     ### Rebase <Es una mala practica>, sobre escribe los repositorios por lo que si se llega a utilizar es importante que solo se use en el entorn local, la rama que se va unir no deberia de estar en el repositorio remoto solo en el localhost.
         <li>
