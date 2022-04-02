@@ -163,7 +163,7 @@ Para unir ramas
 Cuando existe un conflicto. aparecen estos comentarios en el codigo:
 
 ![image text](https://codigonaranja.com/wp-content/uploads/2017/05/merge-conflict-git.png.webp)
-[https://codigonaranja.com/]
+######[https://codigonaranja.com/]
 
 
 VSCODE indica conque versión del conflicto te quieres quedar. En otros editores podría ser manual el realizar esta selección, por lo que lo podrías hacer manual.
