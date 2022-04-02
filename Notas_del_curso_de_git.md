@@ -239,17 +239,7 @@ Eliminar tag de forma definitiva en la nube de git.
 
 ### Entorno de trabajo
 
-En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un 'code review', si pasa todas las pruebas se realiza un 'pull request' al servidor de pruebas llamado 'Staging develop'. Despues de verificar que no hay errores se realizar otro 'pull request' (Esto solo es una caracteristica de los repositorios remotos cloud), a los servidores de producción.
-
-```mermaid
-graph LR
-A(Bitbuket) --> B[Pull Request]
-```
-```mermaid
-graph LR
-A(GitLab) --> B[Merge Request]
-```
-
+En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que hace un 'code review', si pasa todas las pruebas se realiza un 'pull request' al servidor de pruebas llamado 'Staging develop'. Despues de verificar que no hay errores se realizar otro 'pull request' (Esto solo es una caracteristica de los repositorios remotos cloud), a los servidores de producción.</br>
 ```mermaid
 
 graph LR
@@ -262,11 +252,10 @@ H([deployment])-->L((Pull Request</br>Merge Request))-->I([Staging  develo])-->O
 
 P([GitHub</br>GitLab</br>Bitbuket</br>])-->O
 P([GitHub</br>GitLab</br>Bitbuket</br>])----->L
-
-
 ```
 
-DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
+## DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles.</br>
+![imagen text](https://republicaweb.es/wp-content/uploads/2020/05/gitkraken-report-devops-tools-2020-rw.png)
 
 ### .gitignore
 
