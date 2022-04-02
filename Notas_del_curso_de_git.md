@@ -257,7 +257,7 @@ A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--P
 
 ```
 ```mermaid
-gitgraph
+graph git
 options
 {
     "nodeSpacing": 150,
