@@ -253,30 +253,22 @@ A(GitLab) --> B[Merge Request]
 ```mermaid
 
 graph LR
+A[Flujo de trabajo]-->B([R_Fooder])--merge-->H
+A[Flujo de trabajo]-->C([R_Header])--merge-->H
+A[Flujo de trabajo]-->D([R_login])--merge-->H
+A[Flujo de trabajo]-->E([R_sql])--merge-->H
+A[Flujo de trabajo]-->G([R_interface])--merge-->H
+H([deployment])--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
+
+```
+
+
+```mermaid
+
+graph LR
 A[Flujo de trabajo]-->B[(Ramas trabajo)]--Pull Request-->D([Staging  develo])--Pull Request-->F([Rama master])
 
 ```
-```mermaid
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch fooder
-commit
-branch newbranch
-commit
-branch header
-commit
-checkout master
-commit
-commit
-merge newbranch
-```
-
 
 DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles
 
