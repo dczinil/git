@@ -233,7 +233,74 @@ Eliminar tag de forma definitiva en la nube de git.
 
     git push origin :refs/tags/<Nombre del tag>
 
+<<<<<<< Updated upstream
 ### Muestra de forma grafica en una nueva ventana el historial completo de git
+=======
+### .gitignore - Lo descrito en este archivo se ignora para no subir se a los repositorios locales o remotos
+
+Se genera un archivo es impresindible que se llame <.gitignore> dentro del el va una lista de los archivos que se van a ignorar.</br>
+    *.jpg
+    *.log
+    *.bak
+    ´url_del_archivo´
+
+Al finalizar hay que agregar lo al repositorio de forma normal a staging y posterior commit
+
+    git add .gitignore
+    git commit -m "Comentarios"
+
+### Rebase - 'Es una mala practica', sobre escribe los repositorios por lo que si se llega a utilizar es importante que solo se use en el entorn local, la rama que se va unir no deberia de estar en el repositorio remoto solo en el localhost.
+
+- Se debe de tener cuidado, dado que sobrescribe la historia del proyecto ocaciona varios conflictos cuando hay que hacer release.
+- No quedan historial de los cambios originales.
+- No se sabe el autor real de los commit.
+- Si la rama principal avanzó varios commit puede generar varios conflictos que se tienen que corregir de forma manual.
+- Rebase rimero a la rama que cambia (o que se va a eliminar), despues a la rama que va a qpermanecer.
+
+### stash - Funsiona para poder ocultar momentanimente el trabajo y que git no los rastrie, trabajo en staging como el que no esta. Pero no estara guardado en ningun lugar.
+
+Mando todos los archivos sin seguimiento a la memoria cache.</br>
+    git stash
+
+Para guardar los archivos que estan en staging.</br>
+    git stash -u
+
+Aun que stash te permite guardar los archivos sin mensaje la mejor practica es agregar un mensaje para tener contexto.</br>
+    git stash save "mensaje"</br>
+Dado que se pueden agregar parios archivos existe una forma de elistarlos.</br>
+    git stash list
+        stash@{0}: ...
+
+Para visualizar las diferncias.</br>
+    git stash show
+
+Para ver las diferencias completas hay que agregar.</br>
+    git stash show -p
+
+Con el diferencial puede sacar todos los archivos en stash a la rama actual. Por defectostash lanzara el ultimo agregado.</br>
+    git stash pop
+
+Para lanzar un stash especifico hay que saber primero su identificador con 'list'.</br>
+    git stash pop 'StashIdentificador'
+
+Si tus cambios de stash ocacionan conflicto con tus ramas actuales, se puede generar un rama y agregar aplicar los cambios en esta.</br>
+    git stash branch 'nombre de la rama' 'StashIdentificador'
+
+Para aplicar los cambios en la rama que se encuentra.</br>
+    git stash apply 
+
+Si ya no requieres el stash puedes eliminar lo.</br>
+    git stash drop 'StashIdentificador'
+
+Para eliminar todos los stash.</br>
+    git stash clear
+
+### clean - 
+
+  
+
+### cherry-pick - 
+>>>>>>> Stashed changes
 
     gitk
 
