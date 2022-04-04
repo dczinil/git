@@ -84,9 +84,13 @@ Borrar de la cache -->
 
     git commit -m "Comentarios"
 
-Agrega al commit todos los comentarios sin pasar por el "git add ...", solo aplica para los archivos que no son recien creados.
-
+Agrega al commit todos los comentarios sin pasar por el "git add ...", solo aplica para los archivos que no son recien creados.</br>
 git commit -am "Comentarios"
+
+Para agregar cambios a un commit ya realizado.
+- Se realizan los cambios en los archivos y se guardan.
+- Se les da seguimiento en staging.</br>
+git commit --amend 
 
 ### log - Ver el historico de los eventos de git se realiza. 
 
@@ -344,4 +348,5 @@ P([GitHub</br>GitLab</br>Bitbuket</br>])----->L
 ```
 
 ## DeVops Es quienrealiza los pull reques quien se encarga que los trabajos de los developers se vulevan más faciles.</br>
-![imagen text](https://republicaweb.es/wp-content/uploads/2020/05/gitkraken-report-devops-tools-2020-rw.png)
+![imagen text](https://republicaweb.es/wp-content/uploads/2020/05/gitkraken-report-devops-tools-2020-rw.png)</br>
+![imagen text](https://i.pinimg.com/originals/c5/8d/38/c58d388ecf60443e2b94d7a1200eef5a.jpg)
