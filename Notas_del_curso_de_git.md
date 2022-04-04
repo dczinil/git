@@ -343,7 +343,7 @@ En un entorno de trabajo la rama master esta bloqueada para pasar a ella hay que
 ```mermaid
 
 graph LR
-A[Flujo de trabajo]-->B([R_Fooder])--merge-->H
+A[Flujo de trabajo]-->B([R_Fooder])--merge-->Hñ
 A[Flujo de trabajo]-->C([R_Header])--merge-->H
 A[Flujo de trabajo]-->D([R_login])--merge-->H
 A[Flujo de trabajo]-->E([R_sql])--merge-->H
