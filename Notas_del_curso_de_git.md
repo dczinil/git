@@ -325,7 +325,9 @@ Para eliminar archivos .gitignore sin seguimiento.</br>
 Agregue el interruptor -i para hacer un 'git clean' interactivo.</br>
 
 
-### cherry-pick - 
+### cherry-pick - Agrega una modificación de una rama a otra, sin necesidad de realizar un merge entre ramas. #NOTE Es una mala practica.
+Se ejecuta desde la rama a la cual se le quiere agregar el commit de otra rama.</br>
+git cherry-pick 'CommitHash'
 
 ### grep -
 
