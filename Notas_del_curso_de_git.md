@@ -324,12 +324,25 @@ Para eliminar archivos .gitignore sin seguimiento.</br>
 
 Agregue el interruptor -i para hacer un 'git clean' interactivo.</br>
 
-
 ### cherry-pick - Agrega una modificación de una rama a otra, sin necesidad de realizar un merge entre ramas. #NOTE Es una mala practica.
 Se ejecuta desde la rama a la cual se le quiere agregar el commit de otra rama.</br>
 git cherry-pick 'CommitHash'
 
-### grep -
+### reflog - para mostrar todo los head que se han hecho, nunca se borra nada en git, hasta lo eliminado se registra y permanece.
+
+git reflog
+
+Muestra el contenido de todas las ramas.</br>
+git reflog --all
+
+### grep - Busca dentro del repositorio.
+
+git grep 'Palabra a buscar'
+
+Busca el archivo y cuantas veces se repite la palabra.</br>
+git grep -n 'Palabra a buscar'
+
+
 
 ## gitk - Muestra de forma grafica en una nueva ventana el historial completo de git. #NOTE se requiere instalar aparte e algunos sistemas operativos.
 
