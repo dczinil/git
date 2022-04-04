@@ -268,7 +268,7 @@ Al finalizar hay que agregar lo al repositorio de forma normal a staging y poste
 - Si la rama principal avanzó varios commit puede generar varios conflictos que se tienen que corregir de forma manual.
 - Rebase rimero a la rama que cambia (o que se va a eliminar), despues a la rama que va a qpermanecer.
 
-### stash - Funsiona para poder ocultar momentanimente el trabajo y que git no los rastrie. Pero no estara guardado en ningun lugar.
+### stash - Funsiona para poder ocultar momentanimente el trabajo y que git no los rastrie, trabajo en staging como el que no esta. Pero no estara guardado en ningun lugar.
 
 Mando todos los archivos sin seguimiento a la memoria cache.</br>
     git stash
@@ -306,19 +306,26 @@ Si ya no requieres el stash puedes eliminar lo.</br>
 Para eliminar todos los stash.</br>
     git stash clear
 
-### clean - Se puede considerar como un comando que completa; 'reset' y 'checkout'. Mientras que estos comandos trabaja con archivos en el repositorio 'clean' lo realiza con los que aun no son agregados a stagnig.
 
+### clean -  Puede considerarse complemento de los comandos 'reset' y 'checkout', pero a diferencia de estos se utiliza para interactuar con los archivos que aun no estan en staging.
 
+Para ver una ejecución en seco.</br>
+git clean --dry-run
+'git clean -n'
 
-  
+Para forzar la eliminación de archivos sin seguimiento. No borra directorios.</br>
+ 'git clean -f'
+
+Para eliminar directorios sin seguimiento.</br>
+'git clean -f -d'
+
+Para eliminar archivos .gitignore sin seguimiento.</br>
+'git clean -f -x'
+
+Agregue el interruptor -i para hacer un 'git clean' interactivo.</br>
+
 
 ### cherry-pick - 
-
-
-
-### amend - 
-
-
 
 ### grep -
 
