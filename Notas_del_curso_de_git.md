@@ -274,10 +274,22 @@ Al finalizar hay que agregar lo al repositorio de forma normal a staging y poste
 git stash 
 
 
-### clean - 
+### clean -  
 
+Para ver una ejecución en seco
+    git clean --dry-run
+    git clean -n
 
+Para forzar la eliminación de archivos sin seguimiento
+    git clean -f
 
+Para eliminar directorios sin seguimiento
+    git clean -f -d
+
+Para eliminar archivos .gitignore sin seguimiento
+    git clean -f -x
+
+Agregue el interruptor -i para hacer un 'git clean' interactivo.
 ### cherry-pick - 
 
 
