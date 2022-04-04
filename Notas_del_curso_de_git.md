@@ -90,7 +90,7 @@ git commit -am "Comentarios"
 
 Para agregar cambios a un commit ya realizado.
 - Se realizan los cambios en los archivos y se guardan.
-- Se les da seguimiento en staging.
+- Se les da seguimiento en staging.</br>
 git commit --amend 
 
 ### log - Ver el historico de los eventos de git se realiza. 
