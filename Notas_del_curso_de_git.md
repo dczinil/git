@@ -339,10 +339,16 @@ git reflog --all
 
 git grep 'Palabra a buscar'
 
-Busca el archivo y cuantas veces se repite la palabra.</br>
+En que lineas use la palabra.</br>
 git grep -n 'Palabra a buscar'
 
+Cuantas veces use la palabra.</br>
+git grep -c 'Palabra a buscar'
 
+### log - Buscar en los commit.
+
+Cuantas veces use la palabra cabecera en todos los commits.</br>
+git log-S "'Palabra a buscar'"
 
 ## gitk - Muestra de forma grafica en una nueva ventana el historial completo de git. #NOTE se requiere instalar aparte e algunos sistemas operativos.
 
