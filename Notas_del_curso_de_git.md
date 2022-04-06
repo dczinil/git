@@ -136,7 +136,7 @@ Permite restablecer al estado anterior, pero mantienen en working directory los 
 Permite restableceral estado anterior. Todo vuelve como estaba, es el más peligroso por que borra todo.</br>
     git reset <CommitHash> --hard
 
-### checlout -  Para regresar a un commit o trasladar se entre ramas.
+### checkout -  Para regresar a un commit o trasladar se entre ramas.
 
     git checkout
 
@@ -187,7 +187,7 @@ Para abortar un merge o revertir hay que invocar.
 
     git merge --abort
 
-### branche - Para generar una nueva rama
+### branch - Para generar una nueva rama
 
     git branch <nombre de la rama>
 
