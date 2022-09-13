@@ -1,21 +1,21 @@
 # Mis pasos a seguir
 
     git config -l
-    git config --global user.name "dczinil@'star wars planet'"
-    git config --global user.mail <dczinil@gmail.com>
+    git config --global user.name "user"
+    git config --global user.mail "email"
 
 #### Linux
 
-    ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-    ssh-key -t rsa -b 4096 -C <dczinil@gmail.com>
+    ssh-keygen -t ed25519 -C “email”
+    ssh-key -t rsa -b 4096 -C "email"
     eval "$(ssh-agent -s)"
     install xclip
     xclip -selection clipboard < /.ssh/id_rsa.pub
 
 ### Windows
 
-    ssh-keygen -t ed25519 -C “dczinil@gmail.com”
-    ssh-keygen -t rsa -b 4096 -C <dczinil@gmail.com>
+    ssh-keygen -t ed25519 -C “email”
+    ssh-keygen -t rsa -b 4096 -C "email"
     clip < <url/ed25519.pub>
 
 ### Como iniciar bajar un repositorio de github
